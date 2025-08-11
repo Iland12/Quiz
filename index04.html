@@ -96,6 +96,24 @@
         text-decoration: none;
         color: rgb(63, 84, 84);
       }
+      .btn {
+        margin-top: 1rem;
+        padding: 0.4rem 2rem;
+        text-align: center;
+        background-color: rgba(69, 187, 142, 0.539);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: 0 2px 0 rgba(20, 68, 10, 0.662);
+        position: relative;
+        top: 1.5rem;
+        left: 10.5rem;
+      }
+      .btn:active {
+        background-color: rgba(41, 75, 62, 0.539);
+        color: white;
+        transform: translateY(4px);
+      }
       @media (max-width: 768px) {
         .quiz-container {
           margin-top: 5vh;
@@ -124,6 +142,16 @@
           margin-top: 1rem;
           font-size: 1rem;
         }
+        .btn {
+          position: static;
+          display: block;
+          width: 100%;
+          padding: 0.8rem 0;
+          font-size: 1rem;
+          margin-top: 1.5rem;
+          left: 0 !important;
+          top: 0 !important;
+        }
       }
     </style>
   </head>
@@ -146,6 +174,7 @@
           <label for="dd">D. LinkedIn</label>
 
           <div class="page">4/4</div>
+          <a href="./index05.html" class="btn">Next</a>
         </div>
       </div>
     </form>
