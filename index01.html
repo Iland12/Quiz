@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?fremamily=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+      }
+      body {
+        background-color: rgb(196, 220, 241);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .quiz-container {
+        margin-top: 10vh;
+      }
+      .container {
+        width: 27rem;
+        height: 26rem;
+        margin-top: 5vh;
+        background-color: hwb(192 50% 21% / 0.781);
+        padding: 3rem 5rem;
+        border-radius: 20px;
+        box-shadow: inset 0 0 15px rgba(97, 151, 149, 0.696);
+      }
+      label {
+        display: block;
+        background-color: rgba(212, 250, 238, 0.692);
+        border: 2px solid rgba(97, 121, 113, 0.692);
+        margin-bottom: 1rem;
+        border-radius: 23px;
+        padding: 1rem;
+        transition: 0.3s ease-in-out;
+      }
+      label:hover,
+      label:focus:active,
+      label:focus {
+        transform: scale(1.04);
+        cursor: pointer;
+        border: 2px solid rgba(0, 0, 0, 0.591);
+      }
+      input[type="radio"] {
+        display: none;
+      }
+
+      #bb:checked + label,
+      #cc:checked + label,
+      #dd:checked + label {
+        color: rgb(155, 1, 1);
+      }
+      #aa:checked + label {
+        color: green;
+      }
+      #bb:checked + label,
+      #cc:checked + label,
+      #dd:checked + label {
+        background-color: rgba(196, 48, 48, 0.447);
+        border: 2px solid rgb(167, 5, 5);
+      }
+      #aa:checked + label {
+        background-color: rgba(48, 196, 58, 0.447);
+        border: 2px solid rgb(43, 122, 80);
+      }
+      .page {
+        position: fixed;
+        top: 90vh;
+        right: 33vw;
+        font-weight: 600;
+      }
+      .btn {
+        margin-top: 1rem;
+        padding: 0.4rem 2rem;
+        text-align: center;
+        background-color: rgba(69, 187, 142, 0.539);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: 0 2px 0 rgba(20, 68, 10, 0.662);
+        position: relative;
+        top: 1.5rem;
+        left: 10.5rem;
+        transition: 0.3s ease-in-out;
+      }
+      .btn:active {
+        background-color: rgba(41, 75, 62, 0.539);
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(63, 84, 84);
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem !important;
+        }
+        .quiz-container {
+          margin-top: 5vh;
+          width: 100%;
+        }
+        .container {
+          width: 21.8rem;
+          max-width: 100%;
+          height: 34rem;
+          padding: 2rem 1.5rem;
+          box-sizing: border-box;
+        }
+        h3 {
+          font-size: 1.2rem;
+        }
+        label {
+          font-size: 0.8rem;
+          padding: 0.9rem;
+        }
+        .page {
+          position: static;
+          text-align: center;
+          margin-top: 1rem;
+          font-size: 1rem;
+        }
+        .btn {
+          position: static;
+          display: block;
+          width: 100%;
+          padding: 0.8rem 0;
+          font-size: 1rem;
+          margin-top: 1.5rem;
+          left: 0 !important;
+          top: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="quiz-container">
+        <h1 style="font-size: 3rem; text-align: center">QUIZ PROGRAM</h1>
+        <div class="container">
+          <h3 style="margin-top: 0.4rem">Q1. What is the full form of UPI?</h3>
+          <br />
+          <input type="radio" name="html_creator" id="aa" />
+          <label for="aa">A. Unifide Payment Interface</label>
+          <input type="radio" name="html_creator" id="bb" />
+          <label for="bb">B. Universal Payment Integration</label>
+          <input type="radio" name="html_creator" id="cc" />
+          <label for="cc">C. Unique Payment Identifier</label>
+          <input type="radio" name="html_creator" id="dd" />
+          <label for="dd">D. Unifide Processing Infrastructure</label>
+
+          <div class="page">1/4</div>
+          <a href="#" class="btn">Next</a>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
